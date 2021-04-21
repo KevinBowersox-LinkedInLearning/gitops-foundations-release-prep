@@ -11,4 +11,3 @@ spec:
     app: gitops-foundations 
   ports:
     - port: 80
-    - targetPort: 8080
