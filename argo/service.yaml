@@ -10,4 +10,4 @@ spec:
   selector:
     app: gitops-foundations 
   ports:
-    - port: 80
+    - port: 8080
