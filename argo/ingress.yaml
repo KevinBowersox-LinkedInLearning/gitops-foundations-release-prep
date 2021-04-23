@@ -15,4 +15,4 @@ spec:
           - backend:
               serviceName: gitops-foundations-load-balancer
               servicePort: 8080
-        path: /gitops-foundations-load-balancer(/|$)(.*)
+            path: /gitops-foundations-load-balancer(/|$)(.*)
