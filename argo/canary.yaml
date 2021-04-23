@@ -28,6 +28,7 @@ spec:
     port: 80
     # container port number or name
     targetPort: 9898
+    name: gitops-founcations-load-balancer
   analysis:
     # schedule interval (default 60s)
     interval: 10s
