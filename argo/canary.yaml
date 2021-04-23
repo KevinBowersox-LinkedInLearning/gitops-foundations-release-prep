@@ -27,7 +27,7 @@ spec:
     # ClusterIP port number
     port: 80
     # container port number or name
-    targetPort: 9898
+    targetPort: 8080
     name: gitops-foundations-load-balancer
   analysis:
     # schedule interval (default 60s)
@@ -56,7 +56,7 @@ spec:
         timeout: 30s
         metadata:
           type: bash
-          cmd: "curl -s http://gitops-foundations-load-balancer-canary | grep *"
+          cmd: "curl -s gitops-foundations-load-balancer-canary:80 | grep ."
       - name: load-test
         url: http://flagger-loadtester.argo-demo/
         timeout: 5s
