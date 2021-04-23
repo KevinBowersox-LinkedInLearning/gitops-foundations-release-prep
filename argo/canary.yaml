@@ -56,7 +56,7 @@ spec:
         timeout: 30s
         metadata:
           type: bash
-          cmd: "curl -sd 'test' http://gitops-foundations-load-balancer-canary/token | grep token"
+          cmd: "curl http://gitops-foundations-load-balancer-canary/ | grep *"
       - name: load-test
         url: http://flagger-loadtester.argo-demo/
         timeout: 5s
