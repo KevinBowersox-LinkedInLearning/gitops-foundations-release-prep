@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: podinfo
+  namespace: test
+  labels:
+    app: gitops-foundations
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - host: gitopsfoundations.westus2.cloudapp.azure.com
+      http:
+        paths:
+          - backend:
+              serviceName: gitops-foundations-load-balancer
+              servicePort: 80
