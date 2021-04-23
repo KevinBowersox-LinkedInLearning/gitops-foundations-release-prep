@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: podinfo
-  namespace: test
+  name: gitops-foundations
+  namespace: argo-demo
   labels:
     app: gitops-foundations
   annotations:
