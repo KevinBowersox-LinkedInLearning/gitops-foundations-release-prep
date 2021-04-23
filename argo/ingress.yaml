@@ -6,7 +6,7 @@ metadata:
   labels:
     app: gitops-foundations
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
     - host: gitopsfoundations.westus2.cloudapp.azure.com
@@ -15,4 +15,3 @@ spec:
           - backend:
               serviceName: gitops-foundations-load-balancer
               servicePort: 80
-            path: /gitops-foundations-load-balancer(/|$)(.*)
