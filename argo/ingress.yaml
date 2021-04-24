@@ -9,7 +9,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - host: app.gitops-foundations-demo.westus2.cloudapp.azure.com/
+    - host: app.gitops-foundations-demo.westus2.cloudapp.azure.com
       http:
         paths:
           - backend:
