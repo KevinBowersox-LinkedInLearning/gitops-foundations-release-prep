@@ -4,10 +4,9 @@ metadata:
   name: gitops-foundations
   namespace: argo-demo
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: gitops-foundations 
   ports:
     - port: 8080
       targetPort: 8080
-      nodePort: 30000
